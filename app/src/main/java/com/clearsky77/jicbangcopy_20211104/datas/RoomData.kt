@@ -19,9 +19,12 @@ class RoomData(
             val rest = this.price % 10000
             val restCommaStr = NumberFormat.getNumberInstance(Locale.KOREA).format(rest)
 
-            val priceStr = "${uk}억 ${restCommaStr}"
-
-            return priceStr
+            // 억으로 떨어지면 뒤에 0이 붙지 않도록
+            if(price % 10000 == 0){
+                return "${uk}억"
+            }else{
+                return "${uk}억 ${restCommaStr}"
+            }
         }
     }
 
