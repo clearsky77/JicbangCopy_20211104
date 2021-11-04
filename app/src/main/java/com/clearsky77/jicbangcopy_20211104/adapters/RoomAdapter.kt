@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ArrayAdapter
+import android.widget.TextView
 import com.clearsky77.jicbangcopy_20211104.R
 import com.clearsky77.jicbangcopy_20211104.datas.RoomData
 
@@ -22,6 +23,15 @@ class RoomAdapter(
         }
 
         val row = tempRow!!
+
+        val roomData = mList[position]
+
+        // xml에서의 위치 찾기
+        val txtPrice = row.findViewById<TextView>(R.id.txtPrice)
+        val txtAddress = row.findViewById<TextView>(R.id.txtAddressAndFoolr)
+        val txtDescription = row.findViewById<TextView>(R.id.txtDescription)
+
+        txtDescription.text = roomData.description
 
         return row
 
