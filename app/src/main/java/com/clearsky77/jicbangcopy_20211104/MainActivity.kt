@@ -2,10 +2,21 @@ package com.clearsky77.jicbangcopy_20211104
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.clearsky77.jicbangcopy_20211104.datas.RoomData
 
 class MainActivity : AppCompatActivity() {
+
+    val mRooms = ArrayList<RoomData>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        mRooms.add(RoomData(8000,"서울시 동대문구",5,"1번째 방입니다."))
+        mRooms.add(RoomData(18000,"서울시 성북구",5,"2번째 방입니다."))
+        mRooms.add(RoomData(8000,"서울시 강남구",5,"3번째 방입니다."))
+        mRooms.add(RoomData(5000,"서울시 강동구",5,"4번째 방입니다."))
+        mRooms.add(RoomData(8000,"경기도 고양시",5,"5번째 방입니다."))
+        mRooms.add(RoomData(7000,"성남시 분당구",5,"6번째 방입니다."))
     }
 }
