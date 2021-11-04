@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JicbangCopy_20211104">
         <activity
-            android:name=".ViewRoomDetailActivity"
-            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
+            android:name=".SplashActivity"
             android:exported="true" />
+        <activity
+            android:name=".ViewRoomDetailActivity"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
