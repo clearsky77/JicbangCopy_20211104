@@ -28,11 +28,12 @@ class RoomAdapter(
 
         // xml에서의 위치 찾기
         val txtPrice = row.findViewById<TextView>(R.id.txtPrice)
-        val txtAddress = row.findViewById<TextView>(R.id.txtAddressAndFoolr)
+        val txtAddressAndFloor = row.findViewById<TextView>(R.id.txtAddressAndFloor)
         val txtDescription = row.findViewById<TextView>(R.id.txtDescription)
 
         txtPrice.text = roomData.getFormattedPrice()
         txtDescription.text = roomData.description
+        txtAddressAndFloor.text = "${roomData.address}, ${roomData.getFormattedFloor()}"
 
         return row
 
