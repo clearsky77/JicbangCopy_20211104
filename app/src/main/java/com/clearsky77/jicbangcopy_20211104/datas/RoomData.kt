@@ -15,7 +15,12 @@ class RoomData(
             val priceStr = NumberFormat.getNumberInstance(Locale.KOREA).format(this.price)
             return priceStr
         }else{
-            val priceStr = NumberFormat.getNumberInstance(Locale.KOREA).format(this.price)
+            val uk = this.price / 10000
+            val rest = this.price % 10000
+            val restCommaStr = NumberFormat.getNumberInstance(Locale.KOREA).format(rest)
+
+            val priceStr = "${uk}억 ${restCommaStr}"
+
             return priceStr
         }
     }
