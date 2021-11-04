@@ -1,5 +1,6 @@
 package com.clearsky77.jicbangcopy_20211104.datas
 
+import java.io.Serializable
 import java.text.NumberFormat
 import java.util.*
 
@@ -7,8 +8,7 @@ class RoomData(
     val price : Int,
     val address : String,
     val floor : Int,
-    val description : String
-) {
+    val description : String) : Serializable {
 
     fun getFormattedPrice() : String {
         if(this.price < 10000){
