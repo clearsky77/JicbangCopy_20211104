@@ -8,6 +8,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
+//  방 데이터를 담아두기 위한 목록 변수
     val mRooms = ArrayList<RoomData>()
     lateinit var mRoomAdapter: RoomAdapter
 
